@@ -5,7 +5,7 @@ import { useAssignTalent } from '@/hooks/useProjects'
 import { useProjects } from '@/hooks/useProjects'
 import Avatar from '@/components/Avatar'
 import StatusBadge, { STATUS_OPTIONS } from '@/components/StatusBadge'
-import type { TalentStatus } from '@/types'
+import type { TalentProject, TalentStatus } from '@/types'
 import { ExternalLink, Trash2, Film, Plus, Loader2 } from 'lucide-react'
 import clsx from 'clsx'
 
@@ -228,7 +228,7 @@ export default function TalentDetail() {
       {talent.talent_projects && talent.talent_projects.length > 0 && (
         <Section title="Riwayat Project">
           <div className="flex flex-col gap-2">
-            {talent.talent_projects.map((tp) => (
+            {talent.talent_projects.map((tp: TalentProject) => (
               <div key={tp.id} className="flex items-center gap-4 bg-[#161616] border border-[#2a2a2a] rounded px-4 py-3">
                 <Film size={14} className="text-gold flex-shrink-0" />
                 <div className="flex-1">
