@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { font-family: 'DM Sans', sans-serif; }
+  body { background: #0d0d0d; color: #e8e8e8; }
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
+  ::-webkit-scrollbar-thumb:hover { background: #444; }
+}
+
+@layer utilities {
+  .text-gold { color: #c9a84c; }
+  .bg-surface { background: #161616; }
+  .bg-surface-2 { background: #1e1e1e; }
+  .border-dim { border-color: #2a2a2a; }
+}
