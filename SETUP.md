@@ -25,7 +25,7 @@ Media (foto/video) → Synology Drive → link di-paste ke form/app
 ## Langkah 1 — Supabase (Database)
 
 1. Buka [supabase.com](https://supabase.com) → **Start for free**
-2. Buat project baru, pilih region **Southeast Asia (Singapore)**
+2. Buat project baru, pilih region **Southeast Asia (Singapore)** (Project: CastingApp, Pass: dreamlightworldmedia)
 3. Masuk ke **SQL Editor** → paste isi file `supabase-schema.sql` → **Run**
 4. Buka **Project Settings → API**:
    - Copy **Project URL** → ini `SUPABASE_URL`
