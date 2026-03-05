@@ -13,6 +13,8 @@ import syncRoutes from './routes/sync.js'
 const app = express()
 const PORT = process.env.PORT || 3001
 
+app.set('trust proxy', 1)
+
 // ── Security ──────────────────────────────────────────────────────────────────
 app.use(helmet())
 app.use(cors({
@@ -22,7 +24,8 @@ app.use(cors({
 app.use(rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 200,
-  message: { error: 'Too many requests, please try again later.' }
+  message: { error: 'Too many requests, please try again later.' },
+  validate: { xForwardedForHeader: false },
 }))
 
 // ── Middleware ────────────────────────────────────────────────────────────────
